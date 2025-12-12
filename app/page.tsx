@@ -150,19 +150,8 @@ export default function Portfolio() {
         pt: "Desenvolvimento de e-commerce automotivo. Implementação de interfaces responsivas e otimização de performance e segurança.",
         en: "Developed an automotive e-commerce website. Implemented responsive interfaces and optimized performance and security."
       },
-      logo: null,
+      logo: "/img/autoforce.png",
       tags: ["Next.js", "Ruby on Rails", "ReactJS"]
-    },
-    {
-      company: "ANCAT",
-      role: { pt: "Gerente de Desenvolvimento", en: "Project Development Manager" },
-      period: { pt: "Jun 2020 - Out 2020", en: "Jun 2020 - Oct 2020" },
-      description: {
-        pt: "Gestão de projetos utilizando Scrum e Kanban. Definição de requisitos, cronogramas e mitigação de riscos.",
-        en: "Project management using Scrum and Kanban. Defined requirements, schedules, and risk mitigation."
-      },
-      logo: null,
-      tags: ["Scrum", "Kanban", "Management"]
     },
     {
       company: "MediPreço",
@@ -172,7 +161,7 @@ export default function Portfolio() {
         pt: "Desenvolvimento de app híbrido para entrega de suprimentos médicos e plataforma B2B para gestão de insumos.",
         en: "Developed hybrid app for medical supplies delivery and B2B platform for supply management."
       },
-      logo: null,
+      logo: "/img/medipreco.png",
       tags: ["React Native", "ReactJS"]
     },
     {
@@ -183,7 +172,7 @@ export default function Portfolio() {
         pt: "Análise de dados do mercado de energia e desenvolvimento de modelos preditivos com Machine Learning.",
         en: "Energy market data analysis and development of predictive models using Machine Learning."
       },
-      logo: null,
+      logo: "/img/aneel.jpg",
       tags: ["Python", "Machine Learning", "Data Science"]
     },
     {
@@ -194,7 +183,7 @@ export default function Portfolio() {
         pt: "Desenvolvimento de soluções de gamificação. Design e implementação de estratégias eficazes.",
         en: "Developing gamification solutions. Design and implementation of effective strategies."
       },
-      logo: null,
+      logo: "/img/orcestra.png",
       tags: ["Django REST", "Ruby on Rails", "React Native"]
     }
   ];
