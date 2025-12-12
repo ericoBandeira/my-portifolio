@@ -338,28 +338,41 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 3. EXPERIÊNCIA (TIMELINE RESPONSIVA) */}
+        {/* 3. EXPERIÊNCIA (TIMELINE CORRIGIDA) */}
         <section id="experience" className="py-12 md:py-20 px-4 md:px-20 max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-12 flex items-center gap-3 px-2">
             <Briefcase className="text-purple-500" /> {t.sections.exp}
           </h2>
 
-          <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
+          {/* Container da Linha Vertical */}
+          <div className="relative space-y-8">
+            {/* A Linha em si:
+                Mobile: Fica fixa na esquerda (left-8 = 2rem = 32px)
+                Desktop: Fica fixa no centro (left-1/2)
+            */}
+            <div className="absolute top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-slate-700 to-transparent left-8 md:left-1/2 md:-ml-px"></div>
+
             {experiences.map((xp, index) => (
-              <div key={index} className="relative flex flex-col md:flex-row items-center md:justify-between group is-active">
+              <div key={index} className="relative flex flex-col md:flex-row items-start md:justify-between group">
                 
-                {/* Ícone Central (Timeline Dot) */}
-                <div className="absolute left-0 ml-5 md:static md:ml-0 flex items-center justify-center w-10 h-10 rounded-full border-2 border-[#0b0c10] bg-slate-800 group-hover:bg-cyan-500 transition-colors shrink-0 z-10 -translate-x-1/2 md:translate-x-0 shadow-[0_0_0_8px_#0b0c10]">
+                {/* Ícone Central (Bolinha) 
+                    Mobile: left-8 (32px) para bater com a linha
+                    Desktop: left-1/2 (centro) para bater com a linha
+                    translate-x-1/2 negativo para centralizar a bolinha de 40px exatamente no ponto
+                */}
+                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center w-10 h-10 rounded-full border-2 border-[#0b0c10] bg-slate-800 group-hover:bg-cyan-500 transition-colors shadow-[0_0_0_8px_#0b0c10] z-10 mt-1.5">
                   <div className="w-2 h-2 bg-white rounded-full"></div>
                 </div>
                 
                 {/* Espaçador para layout alternado no Desktop */}
                 <div className="hidden md:block w-[calc(50%-2.5rem)]" />
 
-                {/* Card de Conteúdo */}
-                {/* No mobile: ml-12 para não ficar em cima da linha. No desktop: sem margem lateral fixa, o flex cuida disso */}
+                {/* Card de Conteúdo 
+                    Mobile: ml-20 (80px) para fugir da bolinha que está em 32px + largura dela
+                    Desktop: Largura de 50% menos um espacinho
+                */}
                 <div className={`
-                  w-[calc(100%-3rem)] ml-12 md:ml-0 md:w-[calc(50%-2.5rem)] 
+                  w-[calc(100%-5rem)] ml-20 md:ml-0 md:w-[calc(50%-2.5rem)] 
                   bg-[#161b22] p-5 md:p-6 rounded-3xl border border-white/5 hover:border-cyan-500/30 transition-all shadow-xl
                   ${index % 2 === 0 ? 'md:order-first md:mr-auto' : 'md:order-last md:ml-auto'}
                 `}>
